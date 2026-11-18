@@ -1,0 +1,16 @@
+{"request":"Give me the highlights from these meeting notes.","expected_skill":"summarize"}
+{"request":"Rotate the last page of this PDF.","expected_skill":"pdf"}
+{"request":"Summarize this PDF in five bullets.","expected_skill":"summarize"}
+{"request":"How do I write a good executive summary?","expected_skill":"none"}
+{"request":"I missed the meeting. What are the three things I should know from this transcript?","expected_skill":"summarize"}
+{"request":"Give me the gist of the article below in two sentences.","expected_skill":"summarize"}
+{"request":"Turn this long email thread into a short recap for my manager.","expected_skill":"summarize"}
+{"request":"I only have a minute. What did the authors conclude in the attached PDF?","expected_skill":"summarize"}
+{"request":"Read pages 4–7 of this PDF and give me the key takeaways.","expected_skill":"summarize"}
+{"request":"Merge these three PDFs into one file in the order I uploaded them.","expected_skill":"pdf"}
+{"request":"Make this scanned PDF searchable so I can find names with Ctrl+F.","expected_skill":"pdf"}
+{"request":"Pull the tables from page 6 of this PDF into CSV.","expected_skill":"pdf"}
+{"request":"Save pages 2–4 of this PDF as a separate file.","expected_skill":"pdf"}
+{"request":"Give me a template for writing meeting summaries.","expected_skill":"none"}
+{"request":"Fix the grammar in this paragraph and keep every detail.","expected_skill":"none"}
+{"request":"List every invoice number in the text pasted below.","expected_skill":"none"}
