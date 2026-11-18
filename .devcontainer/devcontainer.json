@@ -1,6 +1,8 @@
 {
     "name": "Agent Skill Routing Evaluator",
-    "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+    "dockerComposeFile": "compose.yaml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
     "customizations": {
         "vscode": {
             "extensions": [
