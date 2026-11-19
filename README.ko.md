@@ -48,3 +48,10 @@ JSONL 데이터셋의 각 줄에는 사용자 요청과 정답 라벨이 들어�
 ## 출처 및 라이선스
 
 `docx`, `pdf`, `skill-creator`는 [Anthropic의 Agent Skills 저장소](https://github.com/anthropics/skills/tree/main/skills)에서 가져왔으며 Apache 2.0 라이선스가 적용됩니다. 각 스킬 폴더의 `LICENSE.txt`에서 라이선스를 확인할 수 있습니다. `summarize`는 이 프로젝트를 위해 작성했습니다.
+
+[`docx` 스킬](./skills/docx/SKILL.md)은
+[Anthropic의 Agent Skills 저장소](https://github.com/anthropics/skills/tree/main/skills/docx)의
+스킬을 수정해 사용합니다. 모델이 일반적인 템플릿 작성 요청이나 붙여넣은 텍스트의
+수정 요청에도 `docx`를 선택하는 사례를 확인했습니다. 이에 기존 Word 문서를
+다루거나 결과물을 Word 파일로 명시한 경우에만 선택하도록 스킬 설명을 수정했습니다.
+원본 라이선스는 [LICENSE.txt](./skills/docx/LICENSE.txt)에 포함되어 있습니다.

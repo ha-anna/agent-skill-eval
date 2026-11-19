@@ -48,3 +48,10 @@ The skill definitions and initial evaluation cases are ready. The next milestone
 ## Attribution
 
 `docx`, `pdf`, and `skill-creator` come from [Anthropic’s Agent Skills repository](https://github.com/anthropics/skills/tree/main/skills) and are licensed under Apache 2.0. See the `LICENSE.txt` files in the respective skill folders. The `summarize` skill was written for this project.
+
+The [`docx` skill](./skills/docx/SKILL.md) is adapted from
+[Anthropic’s Agent Skills repository](https://github.com/anthropics/skills/tree/main/skills/docx).
+We narrowed its routing description after the model selected `docx` for
+generic template requests and edits to pasted text. The adapted description
+requires an existing Word document or an explicit request for Word output.
+The upstream license is included in [LICENSE.txt](./skills/docx/LICENSE.txt).
