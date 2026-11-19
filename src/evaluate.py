@@ -6,7 +6,19 @@ from src.skill_loader import load_skill
 
 
 def grade_prediction(raw_reply, expected):
-    prediction = raw_reply.strip()
+    try:
+        reply = json.loads(raw_reply)
+    except json.JSONDecodeError:
+        return "invalid_output"
+
+    if not isinstance(reply, dict) or set(reply) != {"label"}:
+        return "invalid_output"
+
+    prediction = reply["label"]
+
+    if not isinstance(prediction, str):
+        return "invalid_output"
+
     allowed_labels = {"summarize", "pdf", "docx", "none"}
 
     if prediction not in allowed_labels:

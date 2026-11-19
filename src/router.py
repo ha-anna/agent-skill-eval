@@ -10,12 +10,16 @@ def build_routing_prompt(request, skills):
         f"- {skill['name']}: {skill['description']}" for skill in skills
     )
 
-    return f"""Choose the skill that best matches the user's request.
-        Return exactly one skill name, or none if no skill fits.
-        If two skills apply, prioritize the requested outcome over the input format.
+    return f"""First decide whether the user is asking for an action that a listed skill performs.
+        If no skill applies, return none.
+        For summarize, the user must be asking to condense a specific source into its main points.
+        Writing advice, templates, proofreading, and extracting individual fields do not qualify as summarization.
+        If multiple skills apply, prioritize the requested outcome over the input format.
+        Return exactly one label and nothing else.
 
         Available skills:
         {skill_options}
+        - none: No listed skill applies.
 
         User request:
         {request}
@@ -28,6 +32,17 @@ def route_request(user_request, skills):
         "model": "llama3.2:3b",
         "prompt": prompt,
         "stream": False,
+        "format": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "enum": ["summarize", "pdf", "docx", "none"],
+                }
+            },
+            "required": ["label"],
+            "additionalProperties": False,
+        },
     }
 
     request = Request(

@@ -14,3 +14,5 @@
 {"request":"Give me a template for writing meeting summaries.","expected_skill":"none"}
 {"request":"Fix the grammar in this paragraph and keep every detail.","expected_skill":"none"}
 {"request":"List every invoice number in the text pasted below.","expected_skill":"none"}
+{"request":"What belongs in a good meeting recap?","expected_skill":"none"}
+{"request":"Give me a quick recap of these meeting notes.","expected_skill":"summarize"}
